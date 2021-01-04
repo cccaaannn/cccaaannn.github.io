@@ -50,6 +50,11 @@ footer .text-muted{
 	color: #568bff;
 }
 
+.projects_h1{
+	/* text-align: center; */
+	color: #568bff;
+}
+
 .about_p{
 	text-indent: 25px;
 }
