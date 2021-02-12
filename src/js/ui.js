@@ -11,17 +11,10 @@ function onDomLoad(){
 }
 
 function addHead(){
-    document.head.innerHTML = `
+    document.head.innerHTML += `
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="description" content='this is a picture of the eiffel tower' />
-
-        <!-- open graph --->
-        <meta property="og:url" content="https://cccaaannn.github.io/" />
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Can Kurt - Computer Engineer" />
-        <meta property="og:description" content="Hi this is my portfolio." />
-        <meta property="og:image" content="https://raw.githubusercontent.com/cccaaannn/cccaaannn.github.io/master/src/icons/icon.png" />
+        <meta property="description" content='Hi I'm Can Kurt - Computer Engineer and this is my portfolio.' />
 
         <title>Can Kurt Portfolio</title>
         <!-- site icon -->
