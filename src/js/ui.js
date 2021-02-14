@@ -35,7 +35,7 @@ function addHead(){
 function addFooter(){
     footer_div.innerHTML = `
         <footer class="footer">
-            <span class="text-muted">© 2020 Can Kurt</span>
+            <span class="text-muted">© 2021 Can Kurt</span>
         </footer>
     `;
 }
