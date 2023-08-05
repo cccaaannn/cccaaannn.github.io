@@ -1,0 +1,60 @@
+.home-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content-container {
+    height: 100vh;
+}
+
+.name {
+    font-weight: lighter;
+}
+
+.icon-link {
+    color: white;
+}
+
+.icon-link svg {
+    width: 22px;
+    height: 22px;
+}
+
+.icon-link:hover {
+    color: var(--primary);
+}
+
+.icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.glow {
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--primary), 0 0 40px var(--primary), 0 0 50px var(--primary), 0 0 60px var(--primary), 0 0 70px var(--primary);
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px var(--primary), 0 0 40px var(--primary), 0 0 50px var(--primary), 0 0 60px var(--primary), 0 0 70px var(--primary), 0 0 80px var(--primary);
+    }
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--primary), 0 0 40px var(--primary), 0 0 50px var(--primary), 0 0 60px var(--primary), 0 0 70px var(--primary);
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px var(--primary), 0 0 40px var(--primary), 0 0 50px var(--primary), 0 0 60px var(--primary), 0 0 70px var(--primary), 0 0 80px var(--primary);
+    }
+}
