@@ -32,10 +32,10 @@ const ContentIsland = (props: ContentIslandProps) => {
     const { sceneRoute: currentRoute } = useSceneRouter();
 
     useFrame((_state, delta) => {
-        const targetZ = hovering ? z + 2 : z;
+        const targetZ = hovering ? z + 1 : z;
         const position = groupRef.current?.position;
         if (position && !props.isActiveRoute) {
-            easing.damp(position, "z", targetZ, 0.2, delta);
+            easing.damp(position, "z", targetZ, 0.08, delta);
         }
     })
 
@@ -55,8 +55,7 @@ const ContentIsland = (props: ContentIslandProps) => {
                 <meshBasicMaterial
                     transparent
                     opacity={0}
-                // wireframe
-                // color="green"
+                    // wireframe
                 />
             </mesh>
 
@@ -91,7 +90,7 @@ const ContentIsland = (props: ContentIslandProps) => {
 
             <Float
                 floatIntensity={5}
-                rotationIntensity={2}
+                rotationIntensity={3}
                 position={[0, 0, 0]}
             >
                 <Center>
@@ -118,46 +117,6 @@ const ContentIsland = (props: ContentIslandProps) => {
                     </Box>
                 </Html>
             </Float>
-
-            {/* <pointLight
-                castShadow
-                position={[0, 0, 3]}
-                intensity={1000}
-                color="white"
-            />
-
-            <ambientLight intensity={0.5} />
-
-            <mesh
-                receiveShadow
-                position={[0, -1, -4]}
-            >
-                <boxGeometry
-                    args={[6, 6, 0.1]}
-                />
-                <meshStandardMaterial
-                    // transparent
-                    // opacity={0.08}
-                    opacity={1}
-                />
-            </mesh> */}
-
-            {/* <Float
-                floatIntensity={10}
-                position={[x, y - 2, z - 5]}
-            >
-                <TorusMesh scale={1} color="#00d000" />
-            </Float> */}
-
-            {/* <Float
-                floatIntensity={10}
-                position={[x, y - 2, z - 5]}
-            >
-                <BombMesh
-                    scale={0.3}
-                    // color="#00d000"
-                />
-            </Float> */}
         </group>
     )
 }
