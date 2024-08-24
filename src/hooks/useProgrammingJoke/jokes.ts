@@ -6,7 +6,7 @@ const JOKES = [
     "I use TypeScript \n to get false sense of security",
     "I use React \n to stress test CPUs on production",
     "Use Python \n it will help you to GIL yourself",
-    "Its machine learning if its Python \n AI if its PowerPoint",
+    "Machine learning if its Python \n AI if its PowerPoint",
     "AI is \n a better auto complete",
     "'Java' write once, \n debug everywhere",
     "I wear glasses \n because I can't c#",

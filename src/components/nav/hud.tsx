@@ -43,7 +43,7 @@ const Hud = () => {
                                 label={island.sceneRoute.route}
                                 value={island.sceneRoute.route}
                                 onClick={() => setSceneRoute(island.sceneRoute)}
-                                sx={{ px: 1, minHeight: 30, height: 30, alignItems: "start" }}
+                                sx={{ px: 1.5, minHeight: 30, height: 30, alignItems: "start" }}
                             />
                         )
                     }

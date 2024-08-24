@@ -1,3 +1,4 @@
+import IslandRoutes from '@/config/island-route';
 import JOKES from '@/hooks/useProgrammingJoke/jokes';
 import { useEffect, useRef, useState } from 'react'
 
@@ -6,7 +7,6 @@ const getRandomNumber = (max: number): number => {
 }
 
 const DEFAULT_JOKE = JOKES[0];
-const JOKE_ROUTE = "/home";
 
 interface useProgrammingJokeOptions {
     currentRoute: string
@@ -23,6 +23,8 @@ const useProgrammingJoke = (options: useProgrammingJokeOptions) => {
             isFirstRender.current = false;
             return;
         }
+
+        const JOKE_ROUTE = IslandRoutes[0].sceneRoute.route;
 
         if (options.currentRoute === JOKE_ROUTE) {
             const jokeIndex = getRandomNumber(jokes.length);

@@ -11,7 +11,7 @@ interface SceneRouterContext {
 const SceneRouterContextDefaults: SceneRouterContext = {
     cameraPosition: new Vector3(100, 100, 100),
     setCameraPosition: undefined,
-    route: "",
+    route: "/",
     setRoute: undefined
 }
 

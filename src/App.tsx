@@ -2,10 +2,10 @@ import ContentIsland, { ContentIslandContent } from '@/components/content-island
 import CanvasRouter from '@/hooks/useSceneRouter/canvas-router'
 import useSceneRouter from '@/hooks/useSceneRouter/useSceneRouter'
 import { Box } from '@mui/material'
-import { useEffect } from 'react'
 import Scene from '@/components/scene'
 import Hud from '@/components/nav/hud'
 import IslandRoutes from '@/config/island-route'
+import { useEffect } from 'react'
 
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
 
 	const onPositionChange = (island: ContentIslandContent) => setSceneRoute(island.sceneRoute);
 
+	// 404 page is needed for GitHub pages to work properly
 	useEffect(() => {
 		const initialRoute = window.location.pathname;
 		const island = IslandRoutes.find(island => island.sceneRoute.route === initialRoute);

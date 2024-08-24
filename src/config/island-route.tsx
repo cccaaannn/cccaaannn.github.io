@@ -10,7 +10,7 @@ const IslandRoutes: ContentIslandContent[] = [
     {
         sceneRoute: {
             position: new Vector3(100, 100, 100),
-            route: "/home"
+            route: "/"
         },
         header: () => <MainHeader />,
         description: (sceneRoute: SceneRoute) => <MainDescription currentRoute={sceneRoute} />
@@ -119,7 +119,7 @@ const IslandRoutes: ContentIslandContent[] = [
     },
     {
         sceneRoute: {
-            position: new Vector3(115, 97, 65),
+            position: new Vector3(118, 97, 65),
             route: "/snake"
         },
         header: () => <ProjectHeader
