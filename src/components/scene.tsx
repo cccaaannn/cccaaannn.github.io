@@ -11,6 +11,10 @@ const Scene = ({ children }: { children: React.ReactNode }) => {
                 args={[theme.palette.background.default]}
             />
 
+            <ambientLight
+                intensity={5}
+            />
+
             {children}
         </>
     )
