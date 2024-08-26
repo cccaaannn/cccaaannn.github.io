@@ -4,10 +4,12 @@ import { ComponentProps } from 'react';
 
 interface ColorText3DProps extends Omit<ComponentProps<typeof DreiText3D>, "font"> {
     color?: string;
+    glow?: boolean;
 }
 
 const ColorText3D = (props: ColorText3DProps) => {
-    const { children, color, ...rest } = props;
+    const { children, color, glow, ...rest } = props;
+
     return (
         <DreiText3D
             castShadow
@@ -16,7 +18,17 @@ const ColorText3D = (props: ColorText3DProps) => {
             {...rest}
         >
             {children}
-            <meshMatcapMaterial color={color} />
+            {
+                glow
+                    ?
+                    <meshStandardMaterial
+                        color={color}
+                    />
+                    :
+                    <meshMatcapMaterial
+                        color={color}
+                    />
+            }
         </DreiText3D>
     )
 }
