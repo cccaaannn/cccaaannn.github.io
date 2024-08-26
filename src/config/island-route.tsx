@@ -4,7 +4,6 @@ import MainDescription from '@/components/content-island/variant/main/main-descr
 import ProjectDescription from '@/components/content-island/variant/project/project-description'
 import MainHeader from '@/components/content-island/variant/main/main-header'
 import ProjectHeader from '@/components/content-island/variant/project/project-header'
-import { SceneRoute } from '@/hooks/useSceneRouter/useSceneRouter'
 
 const IslandRoutes: ContentIslandContent[] = [
     {
@@ -12,15 +11,19 @@ const IslandRoutes: ContentIslandContent[] = [
             position: new Vector3(100, 100, 100),
             route: "/"
         },
-        header: () => <MainHeader />,
-        description: (sceneRoute: SceneRoute) => <MainDescription currentRoute={sceneRoute} />
+        header: () => <MainHeader
+            glow={false}
+        />,
+        description: ({ currentRoute }) => <MainDescription currentRoute={currentRoute} />
     },
     {
         sceneRoute: {
             position: new Vector3(90, 83, 70),
             route: "/tyd"
         },
-        header: () => <ProjectHeader
+
+        header: ({ hovering, active }) => <ProjectHeader
+            glow={hovering || active}
             text="telegram downloader"
             color="#229ED9"
         />,
@@ -37,7 +40,8 @@ const IslandRoutes: ContentIslandContent[] = [
             position: new Vector3(105, 110, 90),
             route: "/gohst"
         },
-        header: () => <ProjectHeader
+        header: ({ hovering, active }) => <ProjectHeader
+            glow={hovering || active}
             text="gohst"
             color="#00ADD8"
         />,
@@ -54,7 +58,9 @@ const IslandRoutes: ContentIslandContent[] = [
             position: new Vector3(110, 93, 85),
             route: "/wasico"
         },
-        header: () => <ProjectHeader
+
+        header: ({ hovering, active }) => <ProjectHeader
+            glow={hovering || active}
             text="wasico"
             color="#0e7490"
         />,
@@ -69,10 +75,12 @@ const IslandRoutes: ContentIslandContent[] = [
     },
     {
         sceneRoute: {
-            position: new Vector3(90, 110, 90),
+            position: new Vector3(87, 110, 87),
             route: "/sep"
         },
-        header: () => <ProjectHeader
+
+        header: ({ hovering, active }) => <ProjectHeader
+            glow={hovering || active}
             text="sep"
             color="#ff8000"
         />,
@@ -87,7 +95,9 @@ const IslandRoutes: ContentIslandContent[] = [
             position: new Vector3(70, 90, 70),
             route: "/svelther"
         },
-        header: () => <ProjectHeader
+
+        header: ({ hovering, active }) => <ProjectHeader
+            glow={hovering || active}
             text="svelther"
             color="#33D14D"
         />,
@@ -105,7 +115,9 @@ const IslandRoutes: ContentIslandContent[] = [
             position: new Vector3(117, 105, 75),
             route: "/dictator"
         },
-        header: () => <ProjectHeader
+
+        header: ({ hovering, active }) => <ProjectHeader
+            glow={hovering || active}
             text="dictator"
             color="#C2185B"
         />,
@@ -122,7 +134,9 @@ const IslandRoutes: ContentIslandContent[] = [
             position: new Vector3(118, 97, 65),
             route: "/snake"
         },
-        header: () => <ProjectHeader
+
+        header: ({ hovering, active }) => <ProjectHeader
+            glow={hovering || active}
             text="snake"
             color="#FF004C"
         />,
@@ -139,9 +153,11 @@ const IslandRoutes: ContentIslandContent[] = [
             position: new Vector3(87, 100, 80),
             route: "/thesis"
         },
-        header: () => <ProjectHeader
+
+        header: ({ hovering, active }) => <ProjectHeader
+            glow={hovering || active}
             text="thesis"
-            color="#00FFCC"
+            color="#00c9a1"
         />,
         description: () => <ProjectDescription
             text="Improving Context Empowered Deep Neural Networks"
