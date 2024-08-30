@@ -17,11 +17,14 @@ jobs:
           node-version: 20
           cache: "npm"
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies with pnpm
+        run: pnpm install
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
