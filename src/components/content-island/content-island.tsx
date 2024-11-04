@@ -8,7 +8,7 @@ import Html from '@/components/drei-wrapper/html';
 import useSceneRouter, { SceneRoute } from '@/hooks/useSceneRouter/useSceneRouter';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
-interface ContentFUnctionProps {
+interface ContentFunctionProps {
     currentRoute: SceneRoute;
     hovering: boolean;
     active: boolean;
@@ -16,8 +16,8 @@ interface ContentFUnctionProps {
 
 export interface ContentIslandContent {
     sceneRoute: SceneRoute;
-    header: (props: ContentFUnctionProps) => React.ReactNode;
-    description: (props: ContentFUnctionProps) => React.ReactNode;
+    header: (props: ContentFunctionProps) => React.ReactNode;
+    description: (props: ContentFunctionProps) => React.ReactNode;
 }
 
 const HtmlContentWidth = 250;
@@ -25,12 +25,11 @@ const HtmlContentWidth = 250;
 interface ContentIslandProps {
     content: ContentIslandContent;
     isActiveRoute: boolean;
-    onViewCLick: (content: ContentIslandContent) => void;
+    onViewClick: (content: ContentIslandContent) => void;
     onBackClick?: () => void;
 }
 
 const ContentIsland = (props: ContentIslandProps) => {
-
     const groupRef = useRef<Group>();
 
     const [meshHovering, setMeshHovering] = useState(false);
@@ -49,12 +48,12 @@ const ContentIsland = (props: ContentIslandProps) => {
         if (position && !props.isActiveRoute) {
             easing.damp(position, "z", targetZ, 0.08, delta);
         }
-    })
+    });
 
     const onViewClick = () => {
-        props.onViewCLick(props.content);
+        props.onViewClick(props.content);
         setHtmlHovering(false);
-    }
+    };
 
     return (
         <group
@@ -63,7 +62,7 @@ const ContentIsland = (props: ContentIslandProps) => {
             position={[x, y, z]}
             onPointerOver={() => setMeshHovering(true)}
             onPointerOut={() => setMeshHovering(false)}
-            onClick={() => props.onViewCLick(props.content)}
+            onClick={() => props.onViewClick(props.content)}
         >
             <mesh
                 position={[0, -1, 0]}
