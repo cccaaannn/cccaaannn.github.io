@@ -33,7 +33,7 @@ function App() {
 								key={island.sceneRoute.route}
 								content={island}
 								isActiveRoute={currenRoute.route === island.sceneRoute.route}
-								onViewCLick={onPositionChange}
+								onViewClick={onPositionChange}
 								onBackClick={index === 0 ? undefined : () => onPositionChange(IslandRoutes[0])}
 							/>
 						))
