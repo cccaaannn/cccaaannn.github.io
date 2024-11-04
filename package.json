@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc --noEmit && vite build",
     "lint": "eslint .",
-    "deploy": "tsc && vite build && gh-pages --dist dist --branch gh-pages"
+    "deploy": "tsc --noEmit && vite build && gh-pages --dist dist --branch gh-pages"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
