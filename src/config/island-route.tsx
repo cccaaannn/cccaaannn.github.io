@@ -75,7 +75,7 @@ const IslandRoutes: ContentIslandContent[] = [
     },
     {
         sceneRoute: {
-            position: new Vector3(87, 110, 87),
+            position: new Vector3(93, 110, 87),
             route: "/sep"
         },
 
@@ -88,6 +88,26 @@ const IslandRoutes: ContentIslandContent[] = [
             text="Spring cloud microservice project with various other technologies"
             linkText1="Repo"
             linkUrl1="https://github.com/cccaaannn/sep"
+        />
+    },
+    {
+        sceneRoute: {
+            position: new Vector3(75, 105, 75),
+            route: "/qs"
+        },
+
+        header: ({ hovering, active }) => <ProjectHeader
+            glow={hovering || active}
+            text="Quickshot"
+            color="#568bff"
+        />,
+        description: () => <ProjectDescription
+            text="Simple, portable, cross-platform, customizable screenshot tool."
+            linkText1="Repo"
+            linkUrl1="https://github.com/cccaaannn/Quickshot"
+            linkText2="Website"
+            linkUrl2="https://github.kurtcan.com/Quickshot"
+            iframeLink="https://github.kurtcan.com/Quickshot"
         />
     },
     {
